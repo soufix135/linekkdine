@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Hate Work</title> <!-- Title changed here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        video {
+            max-width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>I Hate Work</h1> <!-- Title changed here -->
+    <video id="randomVideo" controls autoplay></video>
+    <script>
+        // List of video URLs
+        const videos = [
+            "https://www.w3schools.com/html/mov_bbb.mp4",
+            "https://www.w3schools.com/html/movie.mp4",
+            "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+        ];
+
+        // Select a random video
+        const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+        // Set the video source
+        const videoElement = document.getElementById("randomVideo");
+        videoElement.src = randomVideo;
+    </script>
+</body>
+</html>
